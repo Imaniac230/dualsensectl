@@ -40,7 +40,7 @@ static const uint32_t tab[256] = {
     0xb3667a2eL, 0xc4614ab8L, 0x5d681b02L, 0x2a6f2b94L, 0xb40bbe37L, 0xc30c8ea1L, 0x5a05df1bL, 0x2d02ef8dL,
 };
 
-uint32_t crc32_le(uint32_t crc, unsigned char const *p, size_t len)
+inline static uint32_t crc32_le(uint32_t crc, unsigned char const *p, size_t len)
 {
     while (len--) {
         crc ^= *p++;

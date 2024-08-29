@@ -1,1 +1,3 @@
 dualsensectl
+!dualsensectl/
+cmake-build*
