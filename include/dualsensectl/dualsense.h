@@ -5,6 +5,9 @@
  *  Copyright (c) 2020 Sony Interactive Entertainment
  */
 
+#ifndef DUALSENSECTL_DUALSENSE_H
+#define DUALSENSECTL_DUALSENSE_H
+
 #include <unistd.h>
 #include <stdio.h>
 #include <stdbool.h>
@@ -291,3 +294,5 @@ static void remove_device(struct udev_device *dev);
 int command_monitor(void);
 void print_version(void);
 int list_devices(void);
+
+#endif //DUALSENSECTL_DUALSENSE_H
