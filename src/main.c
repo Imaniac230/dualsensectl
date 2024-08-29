@@ -5,7 +5,7 @@
  *  Copyright (c) 2020 Sony Interactive Entertainment
  */
 
-#include <dualsensectl/Dualsense.h>
+#include <dualsensectl/dualsense.h>
 
 static void print_help(void)
 {

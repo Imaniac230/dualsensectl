@@ -5,7 +5,7 @@
  *  Copyright (c) 2020 Sony Interactive Entertainment
  */
 
-#include <dualsensectl/Dualsense.h>
+#include <dualsensectl/dualsense.h>
 
 static void dualsense_init_output_report(struct dualsense *ds, struct dualsense_output_report *rp, void *buf)
 {

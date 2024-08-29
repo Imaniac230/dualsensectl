@@ -21,7 +21,7 @@ pkg_check_modules(dbus REQUIRED dbus-1)
 
 include_directories(include)
 
-add_library(${CORE_LIB_NAME} STATIC src/Dualsense.c)
+add_library(${CORE_LIB_NAME} STATIC src/dualsense.c)
 target_link_libraries(${CORE_LIB_NAME} dbus-1 hidapi-hidraw udev)
 target_include_directories(${CORE_LIB_NAME} PUBLIC include ${dbus_INCLUDE_DIRS})
 
