@@ -169,7 +169,11 @@ struct dualsense_output_report_common {
     uint8_t lightbar_green;
     uint8_t lightbar_blue;
 } __attribute__((packed));
+#ifdef __cplusplus
+static_assert(sizeof(struct dualsense_output_report_common) == 47, "Bad output report structure size");
+#else
 _Static_assert(sizeof(struct dualsense_output_report_common) == 47, "Bad output report structure size");
+#endif
 
 struct dualsense_output_report_bt {
     uint8_t report_id; /* 0x31 */
@@ -231,7 +235,11 @@ struct dualsense_feature_report_firmware {
                            // May be Memory Control Unit for Non Volatile Storage
     uint32_t crc32;
 };
+#ifdef __cplusplus
+static_assert(sizeof(struct dualsense_feature_report_firmware) == DS_FEATURE_REPORT_FIRMWARE_INFO_SIZE, "Bad feature report firmware structure size");
+#else
 _Static_assert(sizeof(struct dualsense_feature_report_firmware) == DS_FEATURE_REPORT_FIRMWARE_INFO_SIZE, "Bad feature report firmware structure size");
+#endif
 
 struct dualsense {
     bool bt;

@@ -1,12 +1,12 @@
 cmake_minimum_required(VERSION 3.5)
 project(dualsensectl VERSION 0.6 LANGUAGES C)
 
-# Default to C99
+# Default to C11
 if (NOT CMAKE_C_STANDARD)
-    set(CMAKE_C_STANDARD 99)
+    set(CMAKE_C_STANDARD 11)
 endif ()
 
-if (CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+if (CMAKE_C_COMPILER_ID MATCHES "Clang" OR CMAKE_C_COMPILER_ID MATCHES "GNU")
     add_compile_options(-Wall -Wextra -Wpedantic)
 endif ()
 
